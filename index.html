@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="2048 游戏">
+      <header class="topbar">
+        <div>
+          <h1>2048</h1>
+          <p class="subtitle">合并数字，到达 2048</p>
+        </div>
+        <div class="scores" aria-label="分数面板">
+          <section class="score-box" aria-label="当前分数">
+            <span>分数</span>
+            <strong id="score">0</strong>
+          </section>
+          <section class="score-box" aria-label="最高分">
+            <span>最高</span>
+            <strong id="bestScore">0</strong>
+          </section>
+        </div>
+      </header>
+
+      <section class="controls">
+        <button id="newGame" type="button">新游戏</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <section id="board" class="board" aria-label="2048 棋盘" tabindex="0"></section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
